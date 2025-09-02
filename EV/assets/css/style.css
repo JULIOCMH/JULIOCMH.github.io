@@ -1,0 +1,352 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+@media (max-width: 576px) {
+
+.container{
+max-width: 576px;
+height: 100vh;
+display: grid;
+grid-template-areas: 'navbar navbar navbar'
+                     'filtro filtro filtro'
+                     'display display display'
+                     'footer footer footer';
+grid-template-rows: 1fr 1fr 15fr 1fr;
+}
+body{
+    background-color: whitesmoke;
+}
+.navbar{
+    background-color: rgb(19, 167, 0);
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.navbar img{
+    width: 20%;
+}
+.navbar button{
+    background-color: transparent;
+    border-radius: 20px;
+    border: solid 1px;
+    margin: auto;
+    padding: 5px 12px;
+}
+.botones{
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+.botones a{
+    color: rgb(0, 28, 128);
+    font-size: 100%;
+    font-weight: 600;
+}
+.filtros{
+    grid-area: filtro;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filtros form{
+    width: 80%;
+    height: 80%;
+    border: solid 1px black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.filtros input{
+ border: none;
+ border-radius: 20px;
+ padding-left: 2%;
+ padding-right: 50%;
+}
+
+.filtros button{
+    background-color: rgb(19, 167, 0);
+    border-radius: 20px;
+    width: 10%;
+    border: none;
+}
+.busqueda{
+    display: none;
+}
+.display{
+    grid-area: display;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    background-color: white;
+}
+.carros{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+.cartas{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 20px ;
+
+}
+.cartas img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+h3{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+h4{
+    padding-bottom: 20px;
+}
+.cartas button {
+    background-color: rgb(89, 89, 243);
+    border-radius: 20px;
+    width: 50%;
+    height: 30px;
+    margin-bottom: 20px;
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
+.button{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.button button{
+    width: 20px;
+    height: 20px;
+}
+.button button a{
+    color: black;
+}
+
+.footer{
+    background-color: rgb(19, 167, 0);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.footer img{
+    width: 15%;
+}
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.contacto i{
+    font-size: 16px;
+    margin-left: 10px;
+}
+}
+@media (min-width: 576px) {
+body{
+        background-color: whitesmoke;
+    }
+    .container{
+height: 100vh;
+display: grid;
+grid-template-areas: 'navbar navbar navbar'
+                     'buscador display display'
+                     'footer footer footer';
+grid-template-rows: 1fr 15fr 1fr;
+grid-template-columns: 1fr 5fr;
+}
+.navbar{
+    grid-area: navbar;
+    background-color: rgb(19, 167, 0);
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.navbar img{
+    width: 100px;
+}
+.navbar button{
+    background-color: transparent;
+    border-radius: 20px;
+    border: solid 1px;
+    margin: auto;
+    padding: 5px 12px;
+}
+.botones{
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+.botones a{
+    color: rgb(0, 28, 128);
+    font-size: 100%;
+    font-weight: 600;
+}
+.filtros{
+    grid-area: buscador;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: solid 1px black;
+    border-radius: 0px 20px 20px 0px;
+}
+.filtros form{
+    width: 95%;
+    height: 5%;
+    border: solid 1px black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 10px;
+}
+.filtros input{
+ border: none;
+ border-radius: 20px;
+ padding-left: 2%;
+}
+
+.filtros button{
+    background-color: rgb(19, 167, 0);
+    border-radius: 20px;
+    width: 40%;
+    border: none;
+}
+.busqueda{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.busqueda select{
+    border-radius: 20px;
+    width: 13rem;
+    height: 2rem;
+}
+.busqueda button{
+    margin-top: 20px;
+    width: 60%;
+    height: 20px;
+    border: solid 1px rgb(0, 28, 128);
+}
+.busqueda button a{
+    color: rgb(0, 28, 128);
+}
+.display{
+    grid-area: display;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.carros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 50px;
+    padding-left: 100px ;
+    padding-right: 100px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow: scroll;
+}
+.cartas{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 20px ;
+}
+.cartas img{
+    width: 300px;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+h3{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+h4{
+    padding-bottom: 20px;
+}
+.cartas button {
+    background-color: rgb(89, 89, 243);
+    border-radius: 20px;
+    width: 50%;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.cartas button:hover {
+    background-color: rgb(19, 167, 0);
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
+.button{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+.button button{
+    width: 25px;
+    height: 25px;
+}
+.button button a{
+    color: black;
+}
+
+.footer{
+    background-color: rgb(19, 167, 0);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.footer img{
+    width: 80px;
+}
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.contacto i{
+    font-size: 30px;
+    margin-left: 30px;
+}
+}
